@@ -1,0 +1,74 @@
+/* --------- GOOGLE FONTS ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* --------- VARIABLES ----------*/
+:root{
+  /* FONT */
+  --font: 'Poppins', sans-serif;
+
+  /* COLORS */
+  --color-card: #9176FF;
+  --color-stars: #FFDE59;
+}
+
+/* --------- BASE ----------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* --------- STARS ----------*/
+.rating__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-card);
+  padding: 2.5em;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rating__emoji{
+  font-size: 2.5rem;
+}
+
+.rating__text{
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+}
+
+.rating__stars{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.rating__star{
+  font-size: 3rem;
+  color: #fff;
+
+  transition: all .2s ease;
+}
+
+.rating__star:hover,
+.rating__star:hover ~ .rating__star{
+  color: var(--color-stars);
+}
+
+.active{
+  color: var(--color-stars);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
